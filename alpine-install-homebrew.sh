@@ -13,5 +13,8 @@
 #44 239.0   https://docs.brew.sh/Homebrew-on-Linux#requirements
 #44 239.0 Please install Ruby 2.6 and add its location to your PATH.
 
+apk add ruby
+apk add git
+apk add gcc
 
 curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh -o install.sh && sed -i -e '/^test_ruby() {/,/^}/c\test_ruby() { local executable="$1"; if "$executable" --version 2>/dev/null | grep -q "ruby"; then return 0; else return 1; fi; }' install.sh && NONINTERACTIVE=1 /bin/bash ./install.sh && HOMEBREW_NO_ANALYTICS=1 brew install <!!!SOMTHING!!!>
